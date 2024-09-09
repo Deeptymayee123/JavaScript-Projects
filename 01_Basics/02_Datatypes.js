@@ -7,3 +7,5 @@ console.log(3 + 3); //code readability
 console.log(typeof "deepti");
 console.log(typeof null); //it is an object
 console.log(typeof undefined); // it is undefined
+
+console.log("hello deepti");
