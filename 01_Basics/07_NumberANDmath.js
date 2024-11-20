@@ -26,9 +26,9 @@ const otherNumber = 123.5766;
 Math.ceil() static method always rounds up 
 and returns the smallest integer greater than or equal to a given number.
 */
-// console.log(Math.floor(4, 9));
-// console.log(Math.min(4, 5, 8, 0));
-// console.log(Math.max(4, 5, 8, 0));
+console.log(Math.floor(4, 9));
+console.log(Math.min(4, 5, 8, 0));
+console.log(Math.max(4, 5, 8, 0));
 
 console.log(Math.random()); //gives values between 0 to 1.
 console.log(Math.random() * 10 + 1);

@@ -18,6 +18,7 @@ account_City = "Bengaluru";
 console.log(account_Email); //log
 
 console.table([
+  // new for print more in a table format.
   account_ID,
   account_Email,
   account_Password,
