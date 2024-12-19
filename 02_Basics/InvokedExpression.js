@@ -24,3 +24,8 @@
   //argument
   console.log(`DB connected two ${name}`); //use backtick o/w it will give ${name}.
 })("deepti"); //parameter, it will run. ; for end code
+
+// arrow function expression
+((child) => {
+  console.log(`good morning ${child}`);
+})("laxmi");

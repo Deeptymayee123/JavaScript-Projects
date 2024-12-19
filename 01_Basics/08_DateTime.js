@@ -1,4 +1,4 @@
-let myDate = new Date();
+// let myDate = new Date();
 // console.log(myDate.toString());
 // console.log(myDate.toDateString());
 // console.log(myDate.toLocaleDateString());
@@ -10,7 +10,7 @@ let myDate = new Date();
 //let CreatedDate = new Date(1999, 10, 7, 5, 3); //it gives date with time.
 
 let CreatedDate = new Date("2024-01-13"); //yyyy-mm-dd, dd--mm-yyyy
-//console.log(CreatedDate.toLocaleString()); //Tue Dec 07 1999
+// console.log(CreatedDate.toLocaleString()); //Tue Dec 07 1999
 
 let myTimeStamp = Date.now();
 // console.log(myTimeStamp); //gives time in miliseconds

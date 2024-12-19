@@ -13,7 +13,7 @@
 function add(num1, num2) {
   const res = num1 + num2;
   return res;
-  //console.log(res); //unreachable code
+  //console.log(res); //error:- unreachable code
 }
 const result = add(5, 3);
 console.log(result);

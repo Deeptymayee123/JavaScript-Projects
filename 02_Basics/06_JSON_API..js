@@ -1,4 +1,14 @@
-// do work by anyone
+//  definition of API: do work by anyone
+
+/*
+from mdn:
+ let a,b, rest;
+ [a,b] = [10, 20]
+ console.log(a);
+
+ [a, b, ...rest] = [10,20,30,40,50];
+ console.log(rest);
+*/
 
 // {
 //     "name": "deeptimayee ojha",

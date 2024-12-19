@@ -1,11 +1,12 @@
-// const obj = new Object();   => singleton object
+// object types.
+// const obj = new Object();   => singleton object (object constructor)
 const obj = {}; // => non-singleton object
 obj.id = "1234ID";
 obj.company = "TCS";
 obj.isLoggedIn = false;
 obj.email = "ojha@gmail.com";
 
-// console.log(obj);
+console.log(obj);
 
 const employees = {
   email: "Dipa@gmail.com",
@@ -17,7 +18,7 @@ const employees = {
   },
 };
 
-// console.log(employees.fullname.userFullName.firstname);
+console.log(employees.fullname.userFullName.firstname);
 
 const obj1 = {
   1: "a",
@@ -29,11 +30,11 @@ const obj2 = {
 };
 
 // combining objects
-// const obj3 = {obj1, obj2}
+// const obj3 = { obj1, obj2 };
 
 // const obj3 = Object.assign({}, obj1, obj2);
 const obj3 = { ...obj1, ...obj2 }; // latest
-
+console.log(obj3);
 /*
   read object assign in mdn
 const obj = Object.assign(target, source)
@@ -59,7 +60,7 @@ const users = [
     email: "chinu@gmail.com",
   },
 ];
-// (users[1].email);
+console.log(users[0].email);
 console.log(obj);
 console.log(Object.keys(obj));
 console.log(Object.values(obj));

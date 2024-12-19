@@ -3,6 +3,7 @@ let account_Email = "Deepti@google.com"; //for variables - let and var, {}---> s
 var account_Password = "12345";
 account_City = "Bhubaneswar"; //not recommended
 let account_State;
+// console.log(account_City);
 
 /*
 Prefore not use var

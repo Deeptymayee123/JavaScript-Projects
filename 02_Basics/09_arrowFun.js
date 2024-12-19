@@ -28,7 +28,7 @@ const kadha = () => {
   // console.log(this.userName); //o/p- undefined
   console.log(this);
 };
-// kadha();
+kadha();
 
 //arrow fun syntax:
 

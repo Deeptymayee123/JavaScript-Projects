@@ -8,12 +8,19 @@ const course = {
 
 // course.courseInstructor
 
-const { courseInstructor: instructor } = course;
+const { courseInstructor: instructor } = course; // minimize large name by small name e.g- instructor instead of courseInstructor.
 console.log(instructor);
 
-// react - destructuring
-const navbar = ({ company }) => {
+// react - destructuring  i.e ({ company})
+const navbar = ({ company = "TCS" }) => {
   console.log(`Wellcome to ${company}!`);
 };
 
-navbar((company = "TCS"));
+navbar((company = "Infosys"));
+
+function nav(cpm = "tcs") {
+  console.log(`begin with ${cpm}`);
+}
+
+console.log(nav("Infosys"));
+console.log(nav());
