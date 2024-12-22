@@ -13,7 +13,7 @@ console.log(instructor);
 
 // react - destructuring  i.e ({ company})
 const navbar = ({ company = "TCS" }) => {
-  console.log(`Wellcome to ${company}!`);
+  console.log(`Wellcome to ${company}`);
 };
 
 navbar((company = "Infosys"));
@@ -22,5 +22,5 @@ function nav(cpm = "tcs") {
   console.log(`begin with ${cpm}`);
 }
 
-console.log(nav("Infosys"));
-console.log(nav());
+nav("Infosys");
+nav();

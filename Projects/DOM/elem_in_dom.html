@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <!-- this is the comment -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    const dayone = document.querySelector(".day");
+    console.log(dayone);
+    console.log(dayone.parentElement);
+    console.log(dayone.nextElementSibling);
+
+    console.log("NODES:", parent.childNodes); //nodelist no. is 9 bcz for(\n, text(4) then div(4))
+    //after adding a comment it gives nodelist no 11 (bcz text, comment)
+  </script>
+</html>
+<!--    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[0]);
+    console.log(parent.children[0].textContent);
+    console.log(parent.children[1].innerHTML);
+
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerText);
+    }
+
+    parent.children[1].style.color = "orange";
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+-->

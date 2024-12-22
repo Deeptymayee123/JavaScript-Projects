@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>DOM learning</title>
+    <!-- title is shown in the top of the browser's  -->
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div>
+      <h1 style="color: white" id="title" class="heading">
+        DOM learning on chai aur code.
+        <span style="display: none">text text</span>
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+        officia sequi nihil delectus eaque quam, omnis magnam odio fuga quasi
+        error consectetur. Architecto error inventore enim earum. Excepturi,
+        exercitationem quaerat?
+      </p>
+      <h2>Lorem ipsum</h2>
+      <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+      <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+      <h5>Lorem ipsum dolor sit.</h5>
+      <h5>Lorem, ipsum dolor.</h5>
+      <input type="password" name="" id="" />
+
+      <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+      </ul>
+    </div>
+  </body>
+</html>
+<!-- how to run:
+ right click 
+ open with live server.
+ 
+ 
+ 
+ 
+ title.textContent;
+title.innerHTML;
+title.innerText;
+document.querySelector('input[type="password"]');
+document.querySelector('p:first-child');
+document.querySelector('ul');
+const myul = document.querySelector('ul');
+myul.querySelector('li');
+const turngreen = document.querySelector('li');
+turngreen.style.backgroundColor('green');
+turngreen.style.backgroundColor = 'green';
+turngreen.style.padding = '10px';
+//Nodelist
+const templilist = document.querySelectorAll('li');
+templilist
+temoLilist.style.color = 'green';
+templilist[0].style.color = 'green';
+const myh1 = document.querySelectorAll('h1');
+myh1
+myh1.style.color = 'green';
+templilist.forEach( function(l) {
+l.style.backgroundColor = 'green';
+}) //in browser next line use by shift + enter.
+ //we use map on array and forEach for nodelist
+ //if we want to use map on nodelist then we need to convert nodelist to arry first.
+
+ const tempclasslist = document.getElementsByClassName('list-item');
+tempclasslist
+tempclasslist.forEach( function(li) {
+    console.log(li);
+})
+const myconvertedArray = Array.from(tempclasslist);
+myconvertedArray
+myconvertedArray.forEach(function (li) {
+    li.style.color = 'blue';
+})
+
+document.querySelectorAll('h3');
+const all_h3 =  document.querySelectorAll('h3'); //from wiki javascript browser.
+all_h3
+all_h3[0].innerText;
+all_h3[2].innerText;
+
+const myh3 = document.querySelectorAll('h2');
+myh3
+myh3.forEach(function (h) {
+    h.style.color = 'red';
+})
+myh3.forEach(function (h) {
+    h.style.color = 'red';
+})
+myh3.forEach(function (h) {
+    h.style.color = 'red';
+    h.style.background = 'green';
+    h.style.padding  = "10px";
+})
+myh3.forEach(function (h) {
+    h.style.color = 'red';
+    h.style.background = 'green';
+    h.style.padding  = "10px";
+    h.innerText = "Deepti";
+  })
+-->
+<!--
+
+check by writing in wikipedia by inspectin that 
+1.inspect
+2.console
+3.console.log(window)
+4.console.log(document)
+5.console.dir(document)
+6.console.log(document.links)
+7.console.log(document.links(2));
+8.document.getElementById('backgroundImage');
+9.cument.getElementById('backgroundImage').innerHTML = "<h1>chai aur code</h1>"; //can replace wikipedia ,i.e heading of Brendan Eich.
+
+make diagram it s useful for work
+1. window
+ 2.document
+ 3.html
+ 4.head, body
+ 4.1 head- title,meta-tag
+ 5.title- text node
+ 6.meta- attribute
+ 
+4.2 body
+ 1.div
+ 2.div- (attribute):- paragraph-(textnode), h1-(attribute, textnode)
+ -->
