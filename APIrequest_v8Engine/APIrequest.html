@@ -1,0 +1,35 @@
+<!-- before fetch we use XMLhttp request which is related to Ajax -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    Value State Description 0 UNSENT Client has been created. open() not called
+    yet. 1 OPENED open() has been called. 2 HEADERS_RECEIVED send() has been
+    called, and headers and status are available. 3 LOADING Downloading;
+    responseText holds partial data. 4 DONE The operation is complete.
+  </body>
+  <script>
+    const requestUrl = "https://randomuser.me/api/";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl); //(method, string)here, html does not call.( 1 OPENED open() has been called.)
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText);
+        console.log(data.result);
+        console.log(typeof data); // it will give string for this.responseText but after JSON.parse(this.responseText) it will give object.
+        console.log(data);
+        //console.log(this.responseText);
+      }
+      //console.log(xhr.readyState); // our work done whtn state is 4
+    };
+    // console.log("here"); //is our function execute till this line.
+    xhr.send();
+  </script>
+</html>
+<!-- about console.log in vdo time stamp 23:25
+ 1. v8 engine
+ 2.console.log.h -->

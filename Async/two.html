@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Async</h1>
+    <div class="bottons">
+      <button id="start"><h3>start</h3></button>
+      <button id="stop"><h3>Stop</h3></button>
+    </div>
+  </body>
+  <script>
+    //setInterval(function () {
+    //console.log("Deepti", Date.now());
+    //}, 1000);
+
+    const date = function (str) {
+      //console.log("Deepti", Date.now());
+      console.log(str, Date.now());
+    };
+
+    // const interval = setInterval(date, 1000, "hello"); // how to stop it?
+
+    //clearInterval(interval);
+
+    let intervalId;
+    document.querySelector("#start").addEventListener("click", function () {
+      intervalId = setInterval(date, 1000, "hello");
+    });
+
+    document.querySelector("#stop").addEventListener("click", function (e) {
+      //  const interval = setInterval(date, 1000, "hello"); // how to stop it?
+      clearInterval(intervalId);
+    });
+  </script>
+</html>
+<!-- projetcs in
+ 1.stackblitz -->

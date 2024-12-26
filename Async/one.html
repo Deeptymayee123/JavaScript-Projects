@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async</title>
+  </head>
+  <body>
+    <h1>chai aur code.</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // setTimeout(function () {
+    //  console.log("Deepti");
+    //}, 2000); //handler is a fun which have no name.
+
+    const sayName = function () {
+      console.log("dipa");
+    };
+
+    //document.querySelector("h1").innerHTML = "best JS series"; // how to print it after 2 mins.
+
+    const val = function () {
+      document.querySelector("h1").innerHTML = "best JS series"; // how to print it after 2 mins.
+    };
+
+    const changeMe = setTimeout(val, 2000); //here give only reference sayName don't call execution i.e sayName()
+
+    //clearTimeout(changeMe); //how to set it in an event like in button click.
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeMe);
+      console.log("stopped");
+    });
+  </script>
+</html>

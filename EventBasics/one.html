@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html events</title>
+    <style>
+      .body {
+        background-color: #414141;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <h2>images</h2>
+    <div id="images">
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="prayer"
+            onclick="prayer"
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // document.getElementById("prayer").onclick = function () {
+    // alert("prayer clicked");
+    // };
+
+    //type of event, timestam, defaultPrevented
+    //target, toElement, srcElement, currentTarget,
+    //clienrX, clientY, screenX, screenY
+    //altKey, ctriKey, shiftKty, KeyCode
+
+    //    document.getElementById("images").addEventListener(
+    //    "click",
+    //    function (e) {
+    //      console.log("clicked inside the ul.");
+    //    },
+    //    false
+    //  );
+
+    // document.getElementById("prayer").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked prayer.");
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    //document.getElementById("google").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     e.preventDefault(); //if we don't want to open google browser.
+    //     // e.stopPropagation(); //to stop event propagation.
+    //     console.log(e);
+    //   },
+    // //  false
+    // );
+
+    //event propagation
+    //bubbling up( from down to up)
+    //capturing mode : when we turn 3rd property of all events into true.(it goes from top to bottom)
+    //how to stop event propagation ?
+    //.stopPropagation() --> it is just like preventDefault.
+
+    //projetcs work
+
+    //1.when click the images it will vanish.
+
+    //document.getElementById("images").addEventListener('click',function(){},false)//it works but may be difficult for large no. of images.
+
+    document.querySelector("#images").addEventListener(
+      //select ul.
+      "click",
+      function (e) {
+        //console.log(e); //an event i.e pointerEvent.
+        // console.log(e.target); // select img from li fetch from pointerEvent.
+        //console.log(e.target.parentNode); //it will select parentNode ( parentNode of img i.e li).
+        //let removeit = e.target.parentNode; //if we click img then it remove li but if click list i.e li(.) then it's parent node is ul
+        //removeit.remove();
+
+        console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          let removeit = e.target.parentNode;
+          removeit.remove();
+        }
+      },
+      false
+    );
+
+    // removeit.parentNode.removeChild(removeit);
+  </script>
+</html>
